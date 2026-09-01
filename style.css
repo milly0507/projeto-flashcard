@@ -1,0 +1,138 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Fundo num tom suave de amarelo da Colômbia */
+    background-color: #fff9e6;
+    color: #111;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    padding: 30px;
+    /* Azul da Colômbia no cabeçalho */
+    background-color: #0033a0;
+    color: #fcd116; /* Amarelo no texto */
+    border-bottom: 5px solid #ce1126; /* Detalhe em vermelho */
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+
+/* SEÇÃO DOS FLASHCARDS */
+
+section {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* CARTÃO */
+
+.cartao {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+
+/* PARTE INTERNA */
+
+.cartao-interno {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+/* EFEITO DE VIRADA */
+
+.cartao:hover .cartao-interno {
+    transform: rotateY(180deg);
+}
+
+
+/* FRENTE E VERSO */
+
+.cartao-frente,
+.cartao-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+    /* Sombra estilizada em azul */
+    box-shadow: 0 4px 12px rgba(0, 51, 160, 0.25);
+}
+
+
+/* FRENTE (Amarelo vibrante da Colômbia) */
+
+.cartao-frente {
+    background-color: #fcd116;
+    color: #0033a0;
+    border: 3px solid #0033a0;
+}
+
+.cartao-frente h2 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+/* VERSO (Azul com detalhes em vermelho) */
+
+.cartao-verso {
+    background-color: #0033a0;
+    color: #ffffff;
+    border: 3px solid #ce1126;
+    transform: rotateY(180deg);
+}
+
+.cartao-verso h2 {
+    margin-bottom: 20px;
+    color: #fcd116; /* Título da resposta em amarelo */
+}
+
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #0033a0;
+    color: #ffffff;
+    border-top: 4px solid #ce1126;
+}
